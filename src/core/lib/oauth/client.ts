@@ -20,8 +20,8 @@ export async function openidClient(
     issuer = new Issuer({
       issuer: provider.issuer as string,
       authorization_endpoint:
-        // @ts-expect-error
-        provider.authorization?.url ?? provider.authorization,
+      // @ts-expect-error
+      provider.authorization?.url ?? provider.authorization,
       // @ts-expect-error
       token_endpoint: provider.token?.url ?? provider.token,
       // @ts-expect-error
